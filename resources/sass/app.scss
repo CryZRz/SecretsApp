@@ -1,0 +1,509 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+// Variables
+@import 'variables';
+
+//functions
+@import 'functions';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+//header-styles
+.header-img-profile{
+    width: 40px;
+    height: 40px;
+    &>a>img{
+        @include sizeContent();
+        border-radius: 50%;
+    }
+}
+//header-styles
+
+//login-register-styles
+.login-register-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.login-register-section-form{
+    width: 50%;
+    height: 90%;
+}
+.login-register-btns-change-menu{
+    width: 100%;
+    height: 10%;
+    @include flexBox();
+    &>a{
+        padding: 5px;
+        width: 120px;
+        color: $light-pruple;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        margin: 5px;
+        background-color: transparent;
+        text-decoration: none;
+        text-align: center;
+    }
+}
+.login-register-form-sections{
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    @include flexBox();
+    flex-direction: column;
+    &>div{
+        width: 100%;
+        font-size: 45px;
+        font-weight: bold;
+        color: $light-pruple;
+        text-align: start;
+        font-family: 'Inter', sans-serif;
+    }
+    &>form>input{
+        width: 100%;
+        height: 40px;
+        margin: 5px;
+        border: none;
+        border-bottom: 2px solid $light-pruple;
+        outline: none;
+        background-color: transparent;
+        color: $light-pruple;
+    }
+    &>form>button{
+        width: 200px;
+        color: #fff;
+        font-weight: bold;
+        background-color: $light-pruple;
+        outline: none;
+        border: none;
+        padding: 5px;
+        margin-top: 10px;
+        border-radius: 3px;
+    }
+}
+.login-register-section-background{
+    width: 60%;
+    height: 100%;
+    @include backgroundImg("/storage/app/public/images/bg-register4.jpg", cover, no-repeat);
+}
+.login-section-background{
+    @include backgroundImg("/storage/app/public/images/bg-login2.jpg", cover, no-repeat);
+}
+//login-register-styles
+
+//main-page-styles
+.header-image-background-content{
+    width: 100%;
+    height: 550px;
+}
+.header-image-background{
+    @include sizeContent();
+    @include backgroundImg("/storage/app/public/images/bg-register.jpg", cover, no-repeat);
+}
+.header-image-background:after{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    height: 550px;
+    width: inherit;
+}
+.section-about-container{
+    width: 100%;
+    height: 600px;
+    @include backgroundImg("/storage/app/public/images/bg-about.png", cover, no-repeat);
+}
+.section-about-text{
+    width: 750px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-about-title{
+    font-family: 'Righteous', cursive;
+}
+.section-about-description{
+    width: 60%;
+    text-align: center;
+}
+.section-started-container{
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+}
+.section-started-title{
+    padding: 15px;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+}
+.section-started-description{
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+.section-started-cards{
+    width: 100%;
+    height: 300px;
+    @include flexBox();
+    &>a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    &>a:hover{
+        filter: grayscale(100%);
+    }
+    &>a>div{
+      margin: 10px 20px;
+      width: 360px;
+      height: 250px;
+    }
+    &>a>div>div>img{
+        width: 100%;
+        height: 220px;
+    }
+    &>a>div>div:nth-child(2){
+        width: 100%;
+        height: 30px;
+        background-color: #14213d;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+//main-page-styles
+
+//footer styles
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: #14213d;
+    display: flex;
+    @include backgroundImg("/storage/app/public/images/footer.jpg", cover, no-repeat);
+    &>div{
+        width: 50%;
+        height: 100%;
+        @include flexBox();
+        flex-direction: column;
+    }
+    &>div>h4{
+        font-size: 25px;
+    }
+    &>div>h4:nth-child(2){
+        font-family: 'Lobster', cursive;
+    }
+}
+//footer styles
+
+//profile-styles
+.err-user-not-found-container{
+    width: 100%;
+    height: 100vh;
+    @include flexBox();
+}
+.profile-background-img{
+    width: 100%;
+    height: 320px;
+    @include backgroundImg("/storage/app/public/images/bg-profile.jpg", cover, no-repeat);
+}
+.profile-info-content{
+    width: 80%;
+    margin-left: 50px;
+    height: 250px;
+    display: flex;
+    position: absolute;
+    top: 300px;
+    &>div{
+        @include flexBox();
+        &>h3{
+            font-size: 45px;
+            margin-left: 10px;
+            margin-top: 15px;
+        }
+        &>button{
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+    }
+    &>div>img{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+}
+.secrets-profile-container{
+    width: 100%;
+    min-height: 600px;
+    margin-top: 150px;
+}
+.add-secrete-container{
+    width: 600px;
+    height: auto;
+    padding: 15px;
+    background-color: #14213d;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px auto;
+    &>span{
+        font-size: 18px;
+    }
+    &>form>textarea{
+        width: 95%;
+        height: auto;
+        margin: 8px;
+        padding: 8px;
+        font-size: 16px;
+    }
+    &>form>button{
+        width: 120px;
+        height: 30px;
+        background-color: $light-pruple;
+        color: #ffff;
+        outline: none;
+        border: none;
+        font-weight: bold;
+    }
+}
+.secret-container{
+    width: 600px;
+    height: auto;
+    background-color: #14213d;
+    color: #ffff;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+.secret-header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    &>div>img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    &>div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 10px;
+    }
+}
+.secret-content{
+    height: auto;
+    background-color: #ffffff;
+    margin: 10px 8px;
+    &>span{
+        padding: 5px;
+        color: #000000;
+        font-size: 18px;
+    }
+}
+//profile-styles
+
+//responsive styles
+@media (max-width: 1100px) {
+    .secrets-profile-container{
+        margin-top: 200px;
+    }
+}
+
+@media (max-width: 920px) {
+    .section-about-text{
+        width: 100%;
+    }
+    .section-started-cards{
+        &>a>div{
+            width: 300px;
+        }
+    }
+    footer{
+        @include backgroundImg("/storage/app/public/images/footer-tb.jpg", cover, no-repeat);
+    }
+    //profile-responsive
+    .profile-info-content{
+        width: 80%;
+        height: 200px;
+        &>div>img{
+            width: 200px;
+            height: 200px;
+        }
+        &>div>h3{
+            font-size: 35px;
+            margin-top: 60px;
+        }
+    }
+}
+
+
+@media (max-width: 760px) {
+    //login-register-responsive
+    .login-register-container{
+        flex-direction: column;
+        &>section{
+            width: 100%;
+            height: 50%;
+        }
+        &>section:nth-child(1){
+            height: 80%;
+            &>div>form>input{
+                height: 30px;
+            }
+        }
+    }
+    .profile-info-content {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        margin: 0;
+        &>div>h3{
+            margin: 0;
+        }
+    }
+    .section-about-text{
+        height: 230px;
+    }
+    .section-about-text{
+        width: 100%;
+    }
+    .section-started-cards{
+        &>a>div{
+            width: 250px;
+        }
+    }
+    footer {
+        @include backgroundImg("/storage/app/public/images/footer-mb.jpg", cover, no-repeat);
+    }
+}
+
+@media (max-width: 630px) {
+    .add-secrete-container{
+        width: 500px;
+        margin-top: 150px;
+    }
+    .secret-container{
+        width: 500px;
+    }
+}
+
+@media (max-width: 550px) {
+    .section-about-text{
+        height: 280px;
+        &>div{
+            margin-left: 110px;
+            text-align: center;
+        }
+    }
+    .section-started-container{
+        height: auto;
+    }
+    .section-started-cards{
+        height: 600px;
+        flex-direction: column;
+        &>a>div{
+            width: 350px;
+        }
+    }
+    footer{
+        @include backgroundImg("/storage/app/public/images/footer-mb.jpg", cover, no-repeat);
+    }
+    //profile-responsive
+    .add-secrete-container{
+        width: 450px;
+    }
+    .secret-container{
+        width: 450px;
+    }
+}
+
+@media (max-width: 470px) {
+    //profile-responsive
+    .profile-info-content {
+        &>div>h3 {
+            font-size: 25px;
+            margin: 0;
+        }
+        &>div>button{
+            width: 40px;
+            height: 40px;
+        }
+        &>div>button>svg{
+            @include sizeContent();
+        }
+    }
+    .add-secrete-container{
+        width: 400px;
+    }
+    .secret-container{
+        width: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+    .section-about-text{
+        height: 250px;
+        &>div>h1{
+            font-size: 25px;
+        }
+        &>div>h3{
+            font-size: 18px;
+        }
+    }
+    .section-started-container {
+        height: auto;
+    }
+    .section-started-cards {
+        height: 600px;
+        flex-direction: column;
+
+        &>a>div {
+            width: 280px;
+        }
+    }
+    footer {
+        @include backgroundImg("/storage/app/public/images/footer-mb-sm.jpg", cover, no-repeat);
+        &>div>h4{
+            font-size: 16px;
+        }
+    }
+    //profile-responsive
+    .secrets-profile-container{
+        margin-top: 120px;
+    }
+    .add-secrete-container{
+        width: 300px;
+    }
+    .secret-container{
+        width: 300px;
+        margin: 20px auto;
+    }
+    .profile-info-content{
+        margin-left: 0px;
+        &>div>h3{
+            font-size: 20px;
+            margin: 0;
+        }
+        &>div>img{
+            width: 150px;
+            height: 150px;
+        }
+        &>div>button{
+            width: 40px;
+            height: 40px;
+        }
+        &>div>button>svg{
+            @include sizeContent();
+        }
+    }
+}
+//responsive styles
+
